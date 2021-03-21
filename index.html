@@ -14,12 +14,15 @@
         <a href="https://athenadressrental.youcanbook.me" class="top-header__link">
             <div class="top-header__link-text">Book a Try-on</div>
         </a>
-        <a href="http://gosport.biz.ua/" class="top-header__logo">
-            <img src="./img/logo-000.png" alt="Athena. Dress. Rental" class="top-header__logo-img">
-        </a>
-            <input type="checkbox" id="checkbox" class="mobile-menu__checkbox">
-            <label for="checkbox" class="mobile-menu__btn"><div class="mobile-menu__icon"></div></label>
-            <div class="mobile-menu__container">
+        <input type="checkbox" id="checkbox" class="mobile-menu__checkbox">
+        <label for="checkbox" class="mobile-menu__btn">
+            <div class="mobile-menu__icon"></div>
+        </label>
+        <div class="top-header__logo-img">
+            <a href="http://gosport.biz.ua/" class="top-header__logo"></a>
+        </div>
+
+        <div class="mobile-menu__container">
             <ul class="mobile-menu__list">
                 <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Hair and makeup</a></li>
                 <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Catalogue</a></li>
@@ -27,10 +30,91 @@
                 <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Contacts</a></li>
                 <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Book a Try-on</a></li>
             </ul>
-            </div>
+        </div>
     </header>
     <main>
+        <article class="start-screen">
+            <div class="start-screen__video-wrapper">
+                <video class="start-screen__video" loop muted autoplay="autoplay" poster="./img/video-screen.webp">
+                    <source src="./img/video/main-page-video.mp4" type="video/mp4">
+                </video>
+                <video class="start-screen__video video-mobile" loop muted
+                    poster="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/first-screen.jpg">
+                    <source src="<?php the_field('mhome') ?>" type="video/mp4">
+                </video>
+            </div>
+            <div class="start-screen__caption">
+                <div class="caption__text">
+                    <h1>Dress Rental
+                    </h1>
+                    <p>by Athena</p>
+                </div>
+                <div class="caption__link">
+                    <a href="http://gosport.biz.ua/catalog/">Catalogue</a>
+                </div>
+            </div>
+            <a href="#skip-to-first" class="start-screen__btn-down" id="skip-top-down">
+                <svg width="258" height="129" viewBox="0 0 258 129" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="129" cy="130.5" rx="74" ry="74.5" fill="white" />
+                    <path
+                        d="M209.5 130.5C209.5 174.68 173.462 210.5 129 210.5C84.5382 210.5 48.5 174.68 48.5 130.5C48.5 86.3201 84.5382 50.5 129 50.5C173.462 50.5 209.5 86.3201 209.5 130.5Z"
+                        stroke="white" stroke-opacity="0.4" />
+                    <path
+                        d="M220.5 130.5C220.5 181.313 179.532 222.5 129 222.5C78.4685 222.5 37.5 181.313 37.5 130.5C37.5 79.6872 78.4685 38.5 129 38.5C179.532 38.5 220.5 79.6872 220.5 130.5Z"
+                        stroke="white" stroke-opacity="0.18" />
+                    <circle cx="129" cy="129" r="106.5" stroke="white" stroke-opacity="0.13" />
+                    <circle cx="129" cy="129" r="128.5" stroke="white" stroke-opacity="0.06" />
+                    <path
+                        d="M106.008 101.52V100.88H110.488C110.488 102.288 110.125 103.456 109.4 104.384C108.461 105.579 107.123 106.176 105.384 106.176C103.805 106.176 102.488 105.659 101.432 104.624C100.387 103.589 99.864 102.277 99.864 100.688C99.864 99.12 100.397 97.8133 101.464 96.768C102.541 95.712 103.864 95.184 105.432 95.184C106.659 95.184 107.773 95.568 108.776 96.336C109.267 96.72 109.693 97.168 110.056 97.68L109.496 98.128C109.24 97.6907 108.899 97.296 108.472 96.944C107.576 96.1973 106.557 95.824 105.416 95.824C104.051 95.824 102.904 96.2987 101.976 97.248C101.059 98.1973 100.6 99.3547 100.6 100.72C100.6 102.064 101.053 103.205 101.96 104.144C102.867 105.072 104.003 105.536 105.368 105.536C106.211 105.536 106.957 105.36 107.608 105.008C108.269 104.645 108.76 104.219 109.08 103.728C109.507 103.067 109.741 102.331 109.784 101.52H106.008ZM113.071 100.32C113.733 99.6587 114.549 99.328 115.519 99.328C116.49 99.328 117.301 99.6587 117.951 100.32C118.613 100.971 118.943 101.781 118.943 102.752C118.943 103.723 118.613 104.539 117.951 105.2C117.301 105.851 116.49 106.176 115.519 106.176C114.549 106.176 113.733 105.851 113.071 105.2C112.421 104.539 112.095 103.723 112.095 102.752C112.095 101.781 112.421 100.971 113.071 100.32ZM113.551 104.752C114.085 105.296 114.741 105.568 115.519 105.568C116.298 105.568 116.949 105.296 117.471 104.752C118.005 104.208 118.271 103.541 118.271 102.752C118.271 101.963 118.005 101.296 117.471 100.752C116.949 100.208 116.298 99.936 115.519 99.936C114.741 99.936 114.085 100.208 113.551 100.752C113.029 101.296 112.767 101.963 112.767 102.752C112.767 103.541 113.029 104.208 113.551 104.752ZM129.87 100.608V94.336H130.51V106H129.87V104.832C129.284 105.728 128.441 106.176 127.342 106.176C126.457 106.176 125.7 105.872 125.07 105.264C124.452 104.645 124.142 103.792 124.142 102.704C124.142 101.595 124.457 100.757 125.086 100.192C125.716 99.616 126.468 99.328 127.342 99.328C128.43 99.328 129.273 99.7547 129.87 100.608ZM127.342 99.936C126.628 99.936 126.025 100.176 125.534 100.656C125.054 101.136 124.814 101.813 124.814 102.688C124.814 103.595 125.065 104.304 125.566 104.816C126.068 105.317 126.67 105.568 127.374 105.568C128.068 105.568 128.66 105.317 129.15 104.816C129.652 104.304 129.902 103.595 129.902 102.688C129.902 101.899 129.673 101.243 129.214 100.72C128.756 100.197 128.132 99.936 127.342 99.936ZM133.368 100.32C134.03 99.6587 134.846 99.328 135.816 99.328C136.787 99.328 137.598 99.6587 138.248 100.32C138.91 100.971 139.24 101.781 139.24 102.752C139.24 103.723 138.91 104.539 138.248 105.2C137.598 105.851 136.787 106.176 135.816 106.176C134.846 106.176 134.03 105.851 133.368 105.2C132.718 104.539 132.392 103.723 132.392 102.752C132.392 101.781 132.718 100.971 133.368 100.32ZM133.848 104.752C134.382 105.296 135.038 105.568 135.816 105.568C136.595 105.568 137.246 105.296 137.768 104.752C138.302 104.208 138.568 103.541 138.568 102.752C138.568 101.963 138.302 101.296 137.768 100.752C137.246 100.208 136.595 99.936 135.816 99.936C135.038 99.936 134.382 100.208 133.848 100.752C133.326 101.296 133.064 101.963 133.064 102.752C133.064 103.541 133.326 104.208 133.848 104.752ZM140.097 99.472H140.801L143.057 104.864L145.313 99.072L147.569 104.864L149.889 99.472H150.593L147.569 106.4L145.313 100.608L143.057 106.4L140.097 99.472ZM151.871 106V99.472H152.511V100.496C152.948 99.7173 153.615 99.328 154.511 99.328C155.321 99.328 155.924 99.632 156.319 100.24C156.532 100.581 156.639 101.131 156.639 101.888V106H155.999V101.888C155.999 101.28 155.913 100.843 155.743 100.576C155.487 100.149 155.06 99.936 154.463 99.936C153.737 99.936 153.204 100.24 152.863 100.848C152.628 101.264 152.511 101.851 152.511 102.608V106H151.871Z"
+                        fill="black" />
+                </svg>
+            </a>
+        </article>
+        <section class="fashion">
+            <div class="fashion__block-wrapper">
+                <div class="fashion__image-lg-wrapper">
+                    <div class="fashion__image-lg"></div>
+                </div>
+            </div>
+            <div class="fashion__block-wrapper">
+                <div class="fashion__image-sm-wrapper">
+                    <div class="fashion__image-sm"></div>
+                </div>
+                <div class="fashion__text">
+                    <div class="fashion__discription">
+                        <h3>Engagement and Fashion</h3>
+                        <p>We offer a collection of the most elegant long train dresses for engagement and fashion
+                            photography within the Greater Toronto Area. We also ship around Canada and to US. Our
+                            dresses
+                            are unique and custom designed by Athena and can be worn for a variety of photographic and
+                            videographic occasions</p>
+                    </div>
+                    <div class="fashion__nav-arrows nav-arrows">
+                        <a href="#skip-top-down">
+                            <svg width="11" height="18" viewBox="0 0 11 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 1L2 9L10 17" stroke="#828282" stroke-width="2"></path>
+                            </svg>
+                        </a>
+                        <a href="#skip-to-second">
+                            <svg width="11" height="18" viewBox="0 0 11 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L9 9L1 17" stroke="#828282" stroke-width="2"></path>
+                            </svg>
+                        </a>
+                        <div class="skip__line">
+                            <div class="line lazyloaded"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pregnancy">
 
+        </section>
+        <section class="makeup">
+
+        </section>
     </main>
     <footer>
 

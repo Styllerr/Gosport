@@ -369,18 +369,42 @@ template {
   font-style: normal;
 }
 
+body {
+  width: 100vw;
+  max-width: 1920px;
+  font-family: "Futura PT";
+}
+
 .top-header {
   position: absolute;
   display: flex;
   justify-content: space-between;
   padding: 16px 120px;
+  box-sizing: border-box;
+  height: 96px;
   align-items: center;
-  padding: 0 16px;
   top: 0;
-  background-color: #27ae60;
   left: 0;
   right: 0;
-  z-index: 1;
+  background-color: transparent;
+  z-index: 5;
+}
+
+.top-header__link {
+  border: 1px solid #ffffff;
+  padding: 14px 16px;
+  color: #fff;
+  font-weight: 450;
+  z-index: 5;
+  order: 0;
+}
+
+.top-header__logo-img {
+  z-index: 5;
+  order: 1;
+  width: 214px;
+  height: 64px;
+  background-image: url("/img/logo-fff.png");
 }
 
 .mobile-menu__btn {
@@ -388,18 +412,19 @@ template {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 35px;
-  height: 30px;
+  width: 53px;
+  height: 28px;
   cursor: pointer;
   transition: 0.4s;
+  order: 2;
 }
 
 .mobile-menu__icon {
   display: block;
   position: relative;
-  background: white;
+  background: #fff;
   width: 90%;
-  height: 4px;
+  height: 1px;
   transition: 0.4s;
 }
 
@@ -408,14 +433,15 @@ template {
   content: "";
   display: block;
   position: absolute;
-  background: white;
+  background: #fff;
   width: 100%;
-  height: 4px;
+  height: 1px;
   transition: 0.4s;
 }
 
 .mobile-menu__icon::after {
   top: 8px;
+  width: 50%;
 }
 
 .mobile-menu__icon::before {
@@ -423,20 +449,20 @@ template {
 }
 
 .mobile-menu__container {
-  position: fixed;
+  position: absolute;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   top: 0px;
-  left: 0;
-  right: 0;
-  z-index: 2;
+  left: 16px;
+  right: 16px;
+  z-index: -1;
   height: 0;
   opacity: 1;
   transition: 0.5s;
   overflow: hidden;
-  background-color: #27ae60;
+  background-color: #fff;
 }
 
 .mobile-menu__list {
@@ -453,11 +479,15 @@ template {
 
 .mobile-menu__link {
   text-decoration: none;
-  color: #fff;
+  color: #000;
 }
 
 .mobile-menu__checkbox {
   display: none;
+}
+
+.mobile-menu__checkbox:checked ~ .top-header__logo-img {
+  background-image: url("/img/logo-000.png");
 }
 
 .mobile-menu__checkbox:checked ~ .mobile-menu__nav {
@@ -466,7 +496,7 @@ template {
 
 .mobile-menu__checkbox:checked ~ .mobile-menu__container {
   height: max-content;
-  padding: 150px 0;
+  padding: 156px 0 150px;
 }
 
 .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon {
@@ -476,6 +506,8 @@ template {
 .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::before,
 .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::after {
   top: 0;
+  width: 100%;
+  background: #000;
 }
 
 .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::after {
@@ -486,5 +518,106 @@ template {
 .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::before {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+}
+
+.start-screen {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.start-screen__video-wrapper {
+  position: absolute;
+  height: 100vh;
+  overflow-y: hidden;
+  z-index: 0;
+}
+
+.start-screen__video {
+  width: 100%;
+  filter: brightness(50%);
+}
+
+.start-screen__caption {
+  display: flex;
+  width: 100%;
+  padding: 0 120px;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.start-screen__btn-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+.fashion {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 120px;
+}
+
+.fashion__image-lg-wrapper {
+  display: inline-block;
+  width: 824px;
+  max-width: 100%;
+}
+
+.fashion__image-lg {
+  width: 100%;
+  padding-top: 103.88%;
+  background: url(/img/dress-1.jpg.webp) no-repeat center;
+  background-size: contain;
+}
+
+.fashion__block-wrapper {
+  display: inline-block;
+  min-width: 49%;
+}
+
+.fashion__image-sm-wrapper {
+  width: 681px;
+  max-width: 100%;
+}
+
+.fashion__image-sm {
+  width: 100%;
+  padding-top: 60.499%;
+  background: url(/img/dress-2.jpg.webp) no-repeat center;
+  background-size: contain;
+}
+
+.fashion__text {
+  position: relative;
+}
+
+.fashion__discription {
+  width: 60%;
+}
+
+.fashion__discription > h3 {
+  text-transform: uppercase;
+}
+
+.skip__line {
+  box-sizing: border-box;
+  width: 300px;
+  height: 1px;
+  background-color: #bdbdbd;
+  position: relative;
+  margin-right: 30px;
+}
+
+.nav-arrows {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
 }
 /*# sourceMappingURL=main.css.map */
