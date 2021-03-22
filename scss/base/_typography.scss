@@ -1,44 +1,43 @@
 // Futura PT
 @font-face {
-    font-family: 'Futura PT';
-    src: url('FuturaPT-Heavy.eot');
-    src: local('Futura PT Heavy'), local('FuturaPT-Heavy'),
-        url('FuturaPT-Heavy.eot?#iefix') format('embedded-opentype'),
-        url('FuturaPT-Heavy.woff') format('woff'),
-        url('FuturaPT-Heavy.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Futura PT';
-    src: url('FuturaPT-Medium.eot');
-    src: local('Futura PT Medium'), local('FuturaPT-Medium'),
-        url('FuturaPT-Medium.eot?#iefix') format('embedded-opentype'),
-        url('FuturaPT-Medium.woff') format('woff'),
-        url('FuturaPT-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Futura PT';
-    src: url('FuturaPT-Light.eot');
-    src: local('Futura PT Light'), local('FuturaPT-Light'),
-        url('FuturaPT-Light.eot?#iefix') format('embedded-opentype'),
-        url('FuturaPT-Light.woff') format('woff'),
-        url('FuturaPT-Light.ttf') format('truetype');
+    font-family: "Futura PT";
+    src: url("/font/FuturaPT/FuturaPT-Light.woff2") format("woff2"),
+        url("/font/FuturaPT/FuturaPT-Light.woff") format("woff");
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'Futura PT';
-    src: url('FuturaPT-Bold.eot');
-    src: local('Futura PT Bold'), local('FuturaPT-Bold'),
-        url('FuturaPT-Bold.eot?#iefix') format('embedded-opentype'),
-        url('FuturaPT-Bold.woff') format('woff'),
-        url('FuturaPT-Bold.ttf') format('truetype');
-    font-weight: bold;
+    font-family: "Futura PT";
+    src: url("/font/FuturaPT/FuturaPT-Medium.woff2") format("woff2"),
+        url("/font/FuturaPT/FuturaPT-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+// Playfair Display
+@font-face {
+    font-family: "Playfair Display";
+    src: url("/font/PlayfairDisplay/PlayfairDisplay-Regular.eot");
+    src: local("Playfair Display Regular"), local("PlayfairDisplay-Regular"),
+        url("/font/PlayfairDisplay/PlayfairDisplay-Regular.eot?#iefix")
+            format("embedded-opentype"),
+        url("/font/PlayfairDisplay/PlayfairDisplay-Regular.woff") format("woff"),
+        url("/font/PlayfairDisplay/PlayfairDisplay-Regular.ttf")
+            format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Playfair Display SC";
+    src: url("/font/PlayfairDisplay/PlayfairDisplaySC-Black.eot");
+    src: local("Playfair Display SC Black"), local("PlayfairDisplaySC-Black"),
+        url("/font/PlayfairDisplay/PlayfairDisplaySC-Black.eot?#iefix")
+            format("embedded-opentype"),
+        url("/font/PlayfairDisplay/PlayfairDisplaySC-Black.woff") format("woff"),
+        url("/font/PlayfairDisplay/PlayfairDisplaySC-Black.ttf")
+            format("truetype");
+    font-weight: 900;
     font-style: normal;
 }

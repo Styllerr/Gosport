@@ -11,9 +11,6 @@
 
 <body>
     <header class="top-header">
-        <a href="https://athenadressrental.youcanbook.me" class="top-header__link">
-            <div class="top-header__link-text">Book a Try-on</div>
-        </a>
         <input type="checkbox" id="checkbox" class="mobile-menu__checkbox">
         <label for="checkbox" class="mobile-menu__btn">
             <div class="mobile-menu__icon"></div>
@@ -21,14 +18,18 @@
         <div class="top-header__logo-img">
             <a href="http://gosport.biz.ua/" class="top-header__logo"></a>
         </div>
+        <a href="https://athenadressrental.youcanbook.me" class="top-header__link">
+            <div class="top-header__link-text">Book a Try-on</div>
+        </a>
 
-        <div class="mobile-menu__container">
-            <ul class="mobile-menu__list">
-                <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Hair and makeup</a></li>
-                <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Catalogue</a></li>
-                <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Terms and conditions</a></li>
-                <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Contacts</a></li>
-                <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Book a Try-on</a></li>
+        <div class="top-header__menu top-menu">
+            <div class="top-menu__border"></div>
+            <ul class="top-menu__list">
+                <li class="top-menu__item"><a href="#" class="top-menu__link">Hair and makeup</a></li>
+                <li class="top-menu__item"><a href="#" class="top-menu__link">Catalogue</a></li>
+                <li class="top-menu__item"><a href="#" class="top-menu__link">Terms and conditions</a></li>
+                <li class="top-menu__item"><a href="#" class="top-menu__link">Contacts</a></li>
+                <li class="top-menu__item dark-link"><a href="#" class="top-menu__link">Book a Try-on</a></li>
             </ul>
         </div>
     </header>
@@ -39,15 +40,14 @@
                     <source src="./img/video/main-page-video.mp4" type="video/mp4">
                 </video>
                 <video class="start-screen__video video-mobile" loop muted
-                    poster="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/first-screen.jpg">
-                    <source src="<?php the_field('mhome') ?>" type="video/mp4">
+                    poster="./img/video-screen.webp">
+                    <source src="./img/video/m_main-page-video.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="start-screen__caption">
                 <div class="caption__text">
-                    <h1>Dress Rental
-                    </h1>
-                    <p>by Athena</p>
+                    <h1>Dress Rental</h1>
+                    <span>by Athena</span>
                 </div>
                 <div class="caption__link">
                     <a href="http://gosport.biz.ua/catalog/">Catalogue</a>

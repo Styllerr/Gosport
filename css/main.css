@@ -338,51 +338,60 @@ template {
 }
 
 @font-face {
-  font-family: 'Futura PT';
-  src: url("FuturaPT-Heavy.eot");
-  src: local("Futura PT Heavy"), local("FuturaPT-Heavy"), url("FuturaPT-Heavy.eot?#iefix") format("embedded-opentype"), url("FuturaPT-Heavy.woff") format("woff"), url("FuturaPT-Heavy.ttf") format("truetype");
+  font-family: "Futura PT";
+  src: url("/font/FuturaPT/FuturaPT-Light.woff2") format("woff2"), url("/font/FuturaPT/FuturaPT-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("/font/FuturaPT/FuturaPT-Medium.woff2") format("woff2"), url("/font/FuturaPT/FuturaPT-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/font/PlayfairDisplay/PlayfairDisplay-Regular.eot");
+  src: local("Playfair Display Regular"), local("PlayfairDisplay-Regular"), url("/font/PlayfairDisplay/PlayfairDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("/font/PlayfairDisplay/PlayfairDisplay-Regular.woff") format("woff"), url("/font/PlayfairDisplay/PlayfairDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Playfair Display SC";
+  src: url("/font/PlayfairDisplay/PlayfairDisplaySC-Black.eot");
+  src: local("Playfair Display SC Black"), local("PlayfairDisplaySC-Black"), url("/font/PlayfairDisplay/PlayfairDisplaySC-Black.eot?#iefix") format("embedded-opentype"), url("/font/PlayfairDisplay/PlayfairDisplaySC-Black.woff") format("woff"), url("/font/PlayfairDisplay/PlayfairDisplaySC-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Futura PT';
-  src: url("FuturaPT-Medium.eot");
-  src: local("Futura PT Medium"), local("FuturaPT-Medium"), url("FuturaPT-Medium.eot?#iefix") format("embedded-opentype"), url("FuturaPT-Medium.woff") format("woff"), url("FuturaPT-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura PT';
-  src: url("FuturaPT-Light.eot");
-  src: local("Futura PT Light"), local("FuturaPT-Light"), url("FuturaPT-Light.eot?#iefix") format("embedded-opentype"), url("FuturaPT-Light.woff") format("woff"), url("FuturaPT-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura PT';
-  src: url("FuturaPT-Bold.eot");
-  src: local("Futura PT Bold"), local("FuturaPT-Bold"), url("FuturaPT-Bold.eot?#iefix") format("embedded-opentype"), url("FuturaPT-Bold.woff") format("woff"), url("FuturaPT-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
 body {
-  width: 100vw;
+  width: 100%;
   max-width: 1920px;
   font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 300;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: initial;
 }
 
 .top-header {
   position: absolute;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 16px 120px;
   box-sizing: border-box;
   height: 96px;
-  align-items: center;
   top: 0;
   left: 0;
   right: 0;
@@ -393,10 +402,14 @@ body {
 .top-header__link {
   border: 1px solid #ffffff;
   padding: 14px 16px;
-  color: #fff;
-  font-weight: 450;
+  box-sizing: border-box;
   z-index: 5;
   order: 0;
+}
+
+.top-header__link-text {
+  font-weight: 450;
+  color: #fff;
 }
 
 .top-header__logo-img {
@@ -405,6 +418,23 @@ body {
   width: 214px;
   height: 64px;
   background-image: url("/img/logo-fff.png");
+}
+
+.dark-link {
+  width: 164px;
+  height: 48px;
+  border: 1px solid #000;
+  background-color: #000;
+  box-sizing: content-box;
+}
+
+.dark-link > a {
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  font-weight: 450;
+  color: #fff;
 }
 
 .mobile-menu__btn {
@@ -448,15 +478,16 @@ body {
   top: -8px;
 }
 
-.mobile-menu__container {
+.top-menu {
   position: absolute;
   text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   top: 0px;
-  left: 16px;
-  right: 16px;
+  left: 0px;
+  right: 0px;
   z-index: -1;
   height: 0;
   opacity: 1;
@@ -465,20 +496,26 @@ body {
   background-color: #fff;
 }
 
-.mobile-menu__list {
+.top-menu__border {
+  width: 100%;
+  border: 1px solid #bdbdbd;
+}
+
+.top-menu__item {
+  margin-bottom: 48px;
+}
+
+.top-menu__list {
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 31px;
   transition: 0.5s;
   list-style: none;
-  padding-left: 0;
-  margin-top: -50px;
 }
 
-.mobile-menu__item {
-  font-size: 26px;
-  padding-bottom: 15px;
-}
-
-.mobile-menu__link {
-  text-decoration: none;
+.top-menu__link {
   color: #000;
 }
 
@@ -488,15 +525,23 @@ body {
 
 .mobile-menu__checkbox:checked ~ .top-header__logo-img {
   background-image: url("/img/logo-000.png");
+  transition: 0.5s;
+}
+
+.mobile-menu__checkbox:checked ~ .top-header__link > .top-header__link-text {
+  border: 1px solid #000;
+  box-sizing: border-box;
+  font-weight: 450;
+  color: #000;
 }
 
 .mobile-menu__checkbox:checked ~ .mobile-menu__nav {
   opacity: 1;
 }
 
-.mobile-menu__checkbox:checked ~ .mobile-menu__container {
+.mobile-menu__checkbox:checked ~ .top-menu {
   height: max-content;
-  padding: 156px 0 150px;
+  padding: 96px 0 150px;
 }
 
 .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon {
@@ -524,6 +569,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
+  background-color: #000;
   height: 100vh;
 }
 
@@ -553,6 +599,60 @@ body {
   left: 50%;
   transform: translate(-50%);
   z-index: 1;
+}
+
+.video-mobile {
+  display: none;
+}
+
+.caption__text > h1 {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 96px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.caption__text > span {
+  position: relative;
+  display: block;
+  text-align: right;
+  font-size: 32px;
+  color: #ffffff;
+}
+
+.caption__text > span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 52%;
+  width: 418px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.caption__link > a {
+  cursor: pointer;
+  font-weight: 300;
+  width: 253px;
+  height: 253px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  color: #fff;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.caption__link > a:hover {
+  color: #000;
+  border-color: #fff;
+  background-color: #fff;
 }
 
 .fashion {
