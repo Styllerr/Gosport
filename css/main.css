@@ -808,4 +808,8 @@ a:visited {
 .nav-arrows a + a {
   margin-left: 12px;
 }
+
+.bottom-border {
+  border-bottom: 1px solid #bdbdbd;
+}
 /*# sourceMappingURL=main.css.map */
