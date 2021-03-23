@@ -1,3 +1,17 @@
+.contact-info__phone, .contact-info__email, .contact-info__address, .contact-info__note {
+  padding: 2px 0 0 35px;
+  margin: 16px 0;
+}
+
+.contact-form > input {
+  flex-basis: 47%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #bdbdbd;
+  margin: 0 3% 40px 0;
+  transition: 0.2s;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -828,7 +842,10 @@ a:visited {
 }
 
 .contact-section {
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
+  padding: 120px 6.25%;
 }
 
 .contact-section__water-letter {
@@ -841,9 +858,11 @@ a:visited {
   font-weight: normal;
   font-size: 440px;
   text-transform: uppercase;
+  z-index: 0;
 }
 
 .contact-section__caption {
+  width: 100%;
   color: #000;
 }
 
@@ -862,5 +881,51 @@ a:visited {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
+}
+
+.contact-section__form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 65%;
+  z-index: 1;
+}
+
+.contact-form > input.contact-form__message {
+  flex-basis: 100%;
+}
+
+.contact-form__submit {
+  font-weight: 500;
+  border: 1px solid #000;
+  min-width: 112px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+}
+
+.contact-form__submit:hover {
+  background-color: #000;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.contact-info {
+  max-width: max-content;
+}
+
+.contact-info__phone {
+  background: url(/img/icons/phone.svg) no-repeat;
+}
+
+.contact-info__email {
+  background: url(/img/icons/envelope.svg) no-repeat;
+}
+
+.contact-info__address {
+  background: url(/img/icons/marker.svg) no-repeat;
+}
+
+.contact-info__note {
+  background: url(/img/icons/clock.svg) no-repeat;
 }
 /*# sourceMappingURL=main.css.map */

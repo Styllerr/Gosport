@@ -1,5 +1,8 @@
 .contact-section {
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
+    padding: 120px 6.25%;
     &__water-letter {
         position: absolute;
         left: 0;
@@ -10,8 +13,10 @@
         font-weight: normal;
         font-size: 440px;
         text-transform: uppercase;
+        z-index: 0;
     }
     &__caption {
+        width: 100%;
         color: #000;
         & > h3 {
             font-family: "Playfair Display";
@@ -28,5 +33,52 @@
             font-size: 16px;
             line-height: 24px;
         }
+    }
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 65%;
+        z-index: 1;
+    }
+}
+
+.contact-form {
+    & > input {
+        @extend %input-style;
+        &.contact-form__message {
+            flex-basis: 100%;
+        }
+    }
+    &__submit {
+        font-weight: 500;
+        border: 1px solid #000;
+        min-width: 112px;
+        height: 40px;
+        background-color: #fff;
+        color: #000;
+        &:hover {
+            background-color: #000;
+            color: #fff;
+            transition: 0.2s;
+        }
+    }
+}
+.contact-info {
+    max-width: max-content;
+    &__phone {
+        @extend %list-style;
+        background: url(/img/icons/phone.svg) no-repeat;
+    }
+    &__email {
+        @extend %list-style;
+        background: url(/img/icons/envelope.svg) no-repeat;
+    }
+    &__address {
+        @extend %list-style;
+        background: url(/img/icons/marker.svg) no-repeat;
+    }
+    &__note {
+        @extend %list-style;
+        background: url(/img/icons/clock.svg) no-repeat;
     }
 }
