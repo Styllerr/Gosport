@@ -1,0 +1,32 @@
+.contact-section {
+    position: relative;
+    &__water-letter {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: rgba(0, 0, 0, 0.06);
+        font-family: "Playfair Display";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 440px;
+        text-transform: uppercase;
+    }
+    &__caption {
+        color: #000;
+        & > h3 {
+            font-family: "Playfair Display";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 40px;
+            line-height: 53px;
+            text-transform: uppercase;
+        }
+        & > p {
+            font-family: "Futura PT";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}

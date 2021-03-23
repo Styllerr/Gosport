@@ -655,37 +655,51 @@ a:visited {
   background-color: #fff;
 }
 
-.visual-blok {
+.visual-block {
+  position: relative;
   display: flex;
   justify-content: space-around;
   padding: 120px;
 }
 
-.visual-blok__image-lg-wrapper {
+.visual-block__image-lg-wrapper {
   display: inline-block;
   max-width: 824px;
   width: 92%;
 }
 
-.visual-blok__block-wrapper {
+.visual-block__block-wrapper {
+  position: relative;
   width: 50%;
   padding-right: 10px;
 }
 
-.visual-blok__image-sm-wrapper {
+.visual-block__image-sm-wrapper {
   max-width: 681px;
   width: 100%;
 }
 
-.visual-blok__text {
+.visual-block__water-letter {
+  position: absolute;
+  left: -160px;
+  top: 33%;
+  color: rgba(0, 0, 0, 0.06);
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 440px;
+  text-transform: uppercase;
+}
+
+.visual-block__text {
   position: relative;
 }
 
-.visual-blok__discription {
+.visual-block__discription {
   width: 100%;
 }
 
-.visual-blok__discription > h3 {
+.visual-block__discription > h3 {
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: normal;
@@ -695,7 +709,7 @@ a:visited {
   margin-top: 0;
 }
 
-.visual-blok__nav-arrows {
+.visual-block__nav-arrows {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -811,5 +825,42 @@ a:visited {
 
 .bottom-border {
   border-bottom: 1px solid #bdbdbd;
+}
+
+.contact-section {
+  position: relative;
+}
+
+.contact-section__water-letter {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(0, 0, 0, 0.06);
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 440px;
+  text-transform: uppercase;
+}
+
+.contact-section__caption {
+  color: #000;
+}
+
+.contact-section__caption > h3 {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 53px;
+  text-transform: uppercase;
+}
+
+.contact-section__caption > p {
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,4 +1,4 @@
-.visual-blok {
+.visual-block {
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -9,12 +9,24 @@
         width: 92%;
     }
     &__block-wrapper {
+        position: relative;
         width: 50%;
         padding-right: 10px;
     }
     &__image-sm-wrapper {
         max-width: 681px;
         width: 100%;
+    }
+    &__water-letter {
+        position: absolute;
+        left: -160px;
+        top: 33%;
+        color: rgba(0, 0, 0, 0.06);
+        font-family: "Playfair Display";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 440px;
+        text-transform: uppercase;
     }
     &__text {
         position: relative;
@@ -36,17 +48,6 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-    }
-    &__water-letter {
-        display: absolute;
-        left: 0;
-        top: 50%;
-        font-family: "Playfair Display";
-        font-style: normal;
-        font-weight: normal;
-        font-size: 440px;
-        line-height: 587px;
-        text-transform: uppercase;
     }
 }
 .fashion__image-lg {
