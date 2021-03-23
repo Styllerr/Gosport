@@ -1,0 +1,218 @@
+.start-screen {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    height: 100vh;
+    &__video-wrapper {
+        position: absolute;
+        height: 100vh;
+        overflow-y: hidden;
+        z-index: 0;
+    }
+    &__video {
+        width: 100%;
+        filter: brightness(50%);
+    }
+    &__caption {
+        display: flex;
+        width: 100%;
+        padding: 0 120px;
+        justify-content: space-between;
+        z-index: 1;
+    }
+    &__btn-down {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 1;
+    }
+}
+.video-mobile {
+    display: none;
+}
+.caption__text {
+    & > h1 {
+        font-family: "Playfair Display";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 96px;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 16px;
+    }
+    & > span {
+        position: relative;
+        display: block;
+        text-align: right;
+
+        font-size: 32px;
+        color: #ffffff;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 52%;
+            width: 418px;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+.caption__link {
+    & > a {
+        cursor: pointer;
+        font-weight: 300;
+        width: 253px;
+        height: 253px;
+        border-radius: 50%;
+        border: 1px solid #ffffff;
+        color: #fff;
+        font-size: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.2s;
+        &:hover {
+            color: #000;
+            border-color: #fff;
+            background-color: #fff;
+        }
+    }
+}
+.visual-blok {
+    display: flex;
+    justify-content: space-around;
+    padding: 120px;
+    &__image-lg-wrapper {
+        display: inline-block;
+        max-width: 824px;
+        width: 92%;
+    }
+    &__block-wrapper {
+        width: 50%;
+        padding-right: 10px;
+    }
+    &__image-sm-wrapper {
+        max-width: 681px;
+        width: 100%;
+    }
+    &__text {
+        position: relative;
+    }
+    &__discription {
+        width: 100%;
+        & > h3 {
+            font-family: "Playfair Display";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 40px;
+            line-height: 53px;
+            text-transform: uppercase;
+            margin-top: 0;
+        }
+    }
+    &__nav-arrows {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+.fashion__image-lg {
+    width: 100%;
+    padding-top: 103.88%;
+    background: url(/img/dress-1.jpg.webp) no-repeat center;
+    background-size: contain;
+}
+.fashion__image-sm {
+    width: 100%;
+    padding-top: 60.499%;
+    background: url(/img/dress-2.jpg.webp) no-repeat center;
+    background-size: contain;
+}
+.pregnancy__image-lg {
+    width: 100%;
+    padding-top: 103.88%;
+    background: url(/img/dress-4.jpg.webp) no-repeat center;
+    background-size: contain;
+}
+.pregnancy__image-sm {
+    width: 100%;
+    padding-top: 60.499%;
+    background: url(/img/dress-3.jpg.webp) no-repeat center;
+    background-size: contain;
+}
+.makeup__image-lg {
+    width: 100%;
+    padding-top: 103.88%;
+    background: url(/img/dress-5.jpg.webp) no-repeat center;
+    background-size: contain;
+}
+.makeup__image-sm {
+    width: 100%;
+    padding-top: 60.499%;
+    background: url(/img/dress-6.jpg.webp) no-repeat center;
+    background-size: contain;
+}
+.text-block-wrapper {
+    max-width: 681px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.skip__line {
+    width: 100%;
+    height: 1px;
+    background-color: #bdbdbd;
+    position: relative;
+    margin-right: 30px;
+    top: 20px;
+}
+.line {
+    background-color: #000000;
+    width: 33%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    top: -0.5px;
+    &-2 {
+        background-color: #000000;
+        width: 33%;
+        height: 2px;
+        position: absolute;
+        left: 33%;
+        top: -0.5px;
+    }
+    &-3 {
+        background-color: #000000;
+        width: 33%;
+        height: 2px;
+        position: absolute;
+        left: 66%;
+        top: -0.5px;
+    }
+}
+.skip__num {
+    font-family: "Futura PT";
+    font-size: 16px;
+    color: #4f4f4f;
+    & > span {
+        font-size: 40px;
+        font-weight: 300;
+    }
+}
+.nav-arrows {
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+    & a + a {
+        margin-left: 12px;
+    }
+}
+.bottom-border {
+    border-bottom: 1px solid #bdbdbd;
+}

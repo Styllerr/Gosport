@@ -1,12 +1,7 @@
-@import 'abstracts/variables',
-        'abstracts/mixins',
-        'abstracts/placeholders';
+@import "abstracts/variables", "abstracts/mixins", "abstracts/placeholders";
 
-@import 'vendors/normalize';
+@import "vendors/normalize";
 
-@import 'base/typography',
-        'base/base';
+@import "base/typography", "base/base";
 
-@import 'layout/header',
-        'layout/footer';
-
+@import "layout/header", "layout/main", "layout/footer";
