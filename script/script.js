@@ -22,8 +22,6 @@ let widthBrouser = window.innerWidth;
 const btnName = document.querySelector('.caption__link > a')
 window.addEventListener('resize', (e) => {
     widthBrouser = window.innerWidth;
-    console.log(widthBrouser, btnName);
-    (widthBrouser < 769) ? btnName.innerHTML('Our catalogue')
-    : btnName.innerHTML('Catalogue')
+    (widthBrouser < 1051) ? btnName.innerText = 'Our catalogue'
+    : btnName.innerHTML = 'Catalogue'
 })
-console.log(widthBrouser);
