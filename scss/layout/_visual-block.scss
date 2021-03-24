@@ -1,14 +1,31 @@
+#first,
+#second,
+#third {
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
 .visual-block {
+    @media screen and (max-width: $screen-lg) {
+        flex-direction: column;
+        align-items: center;
+    }
     position: relative;
     display: flex;
     justify-content: space-around;
-    padding: 120px;
+    padding: 6.25%;
     &__image-lg-wrapper {
+        @media screen and (max-width: $screen-lg) {
+            width: 100%;
+        }
         display: inline-block;
         max-width: 824px;
         width: 92%;
     }
     &__block-wrapper {
+        @media screen and (max-width: $screen-lg) {
+            width: 100%;
+        }
         position: relative;
         width: 50%;
         padding-right: 10px;
@@ -16,6 +33,7 @@
     &__image-sm-wrapper {
         max-width: 681px;
         width: 100%;
+        z-index: 0;
     }
     &__water-letter {
         position: absolute;
@@ -27,6 +45,7 @@
         font-weight: normal;
         font-size: 440px;
         text-transform: uppercase;
+        z-index: 1;
     }
     &__text {
         position: relative;
@@ -43,11 +62,22 @@
             margin-top: 0;
         }
     }
+    &__link {
+        font-family: "Futura PT";
+        font-style: normal;
+        font-weight: 450;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration-line: underline;
+
+        color: #000000;
+    }
     &__nav-arrows {
         position: relative;
         display: flex;
         justify-content: space-between;
         width: 100%;
+        z-index: 2;
     }
 }
 .fashion__image-lg {
@@ -87,6 +117,9 @@
     background-size: contain;
 }
 .text-block-wrapper {
+    @media screen and (max-width: $screen-lg) {
+        flex-basis: 100%;
+    }
     max-width: 681px;
     display: flex;
     flex-direction: column;

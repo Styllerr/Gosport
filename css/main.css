@@ -403,7 +403,7 @@ a:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 120px;
+  padding: 1rem 6.25%;
   box-sizing: border-box;
   height: 96px;
   top: 0;
@@ -414,15 +414,23 @@ a:visited {
 }
 
 .top-header__link {
-  border: 1px solid #ffffff;
-  padding: 14px 16px;
+  width: 123px;
+  height: 48px;
   box-sizing: border-box;
+  border: 1px solid #ffffff;
+  padding: 14px 15px;
   z-index: 5;
   order: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .top-header__link {
+    display: none;
+  }
+}
+
 .top-header__link-text {
-  font-weight: 450;
+  font-weight: 300;
   color: #fff;
 }
 
@@ -437,17 +445,20 @@ a:visited {
 .dark-link {
   width: 164px;
   height: 48px;
+  padding: 8px 16px 9px 16px;
+  margin-left: 12px;
   border: 1px solid #000;
   background-color: #000;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 .dark-link > a {
   font-family: "Futura PT";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 24px;
-  font-weight: 450;
+  line-height: 31px;
+  text-align: right;
   color: #fff;
 }
 
@@ -463,33 +474,47 @@ a:visited {
   order: 2;
 }
 
-.mobile-menu__icon {
-  display: block;
-  position: relative;
-  background: #fff;
-  width: 90%;
-  height: 1px;
-  transition: 0.4s;
+.mobile-menu__checkbox {
+  display: none;
 }
 
-.mobile-menu__icon::after,
-.mobile-menu__icon::before {
-  content: "";
-  display: block;
+.mobile-menu__icon {
+  position: relative;
+  width: 48px;
+  height: 28px;
+  right: -3px;
+}
+
+.mobile-menu__icon > span {
   position: absolute;
-  background: #fff;
+  top: 14px;
   width: 100%;
   height: 1px;
-  transition: 0.4s;
+  background-color: #fff;
+}
+
+.mobile-menu__icon::before {
+  top: 0;
+  width: 100%;
 }
 
 .mobile-menu__icon::after {
-  top: 8px;
+  right: 0;
+  bottom: 0;
   width: 50%;
 }
 
-.mobile-menu__icon::before {
-  top: -8px;
+.mobile-menu__icon::before, .mobile-menu__icon::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-color: #fff;
+  transition: 0.2s;
+}
+
+.mobile-menu__icon:hover::after {
+  width: 100%;
+  transition: 0.2s;
 }
 
 .top-menu {
@@ -522,7 +547,7 @@ a:visited {
 .top-menu__list {
   font-family: "Futura PT";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 24px;
   line-height: 31px;
   transition: 0.5s;
@@ -533,19 +558,16 @@ a:visited {
   color: #000;
 }
 
-.mobile-menu__checkbox {
-  display: none;
-}
-
 .mobile-menu__checkbox:checked ~ .top-header__logo-img {
   background-image: url("/img/logo-000.png");
   transition: 0.5s;
 }
 
-.mobile-menu__checkbox:checked ~ .top-header__link > .top-header__link-text {
+.mobile-menu__checkbox:checked ~ .top-header__link {
   border: 1px solid #000;
-  box-sizing: border-box;
-  font-weight: 450;
+}
+
+.mobile-menu__checkbox:checked ~ .top-header__link > .top-header__link-text {
   color: #000;
 }
 
@@ -571,12 +593,10 @@ a:visited {
 
 .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::after {
   transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
 }
 
 .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::before {
   transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
 }
 
 .start-screen {
@@ -602,9 +622,16 @@ a:visited {
 .start-screen__caption {
   display: flex;
   width: 100%;
-  padding: 0 120px;
+  padding: 0 6.25%;
   justify-content: space-between;
   z-index: 1;
+}
+
+@media screen and (max-width: 1049px) {
+  .start-screen__caption {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .start-screen__btn-down {
@@ -669,11 +696,36 @@ a:visited {
   background-color: #fff;
 }
 
+@media screen and (max-width: 1049px) {
+  .caption__link > a {
+    font-size: 16px;
+    width: 120px;
+    height: 48px;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+  }
+}
+
+#first,
+#second,
+#third {
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+
 .visual-block {
   position: relative;
   display: flex;
   justify-content: space-around;
-  padding: 120px;
+  padding: 6.25%;
+}
+
+@media screen and (max-width: 768px) {
+  .visual-block {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .visual-block__image-lg-wrapper {
@@ -682,15 +734,28 @@ a:visited {
   width: 92%;
 }
 
+@media screen and (max-width: 768px) {
+  .visual-block__image-lg-wrapper {
+    width: 100%;
+  }
+}
+
 .visual-block__block-wrapper {
   position: relative;
   width: 50%;
   padding-right: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .visual-block__block-wrapper {
+    width: 100%;
+  }
+}
+
 .visual-block__image-sm-wrapper {
   max-width: 681px;
   width: 100%;
+  z-index: 0;
 }
 
 .visual-block__water-letter {
@@ -703,6 +768,7 @@ a:visited {
   font-weight: normal;
   font-size: 440px;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 .visual-block__text {
@@ -723,11 +789,22 @@ a:visited {
   margin-top: 0;
 }
 
+.visual-block__link {
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: #000000;
+}
+
 .visual-block__nav-arrows {
   position: relative;
   display: flex;
   justify-content: space-between;
   width: 100%;
+  z-index: 2;
 }
 
 .fashion__image-lg {
@@ -778,6 +855,12 @@ a:visited {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .text-block-wrapper {
+    flex-basis: 100%;
+  }
 }
 
 .skip__line {
@@ -927,5 +1010,57 @@ a:visited {
 
 .contact-info__note {
   background: url(/img/icons/clock.svg) no-repeat;
+}
+
+.footer {
+  padding: 76px 6.25%;
+}
+
+.footer__top-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.footer__logo-img {
+  width: 214px;
+  height: 64px;
+  background-image: url("/img/logo-000.png");
+}
+
+.footer__footer-navigation {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-navigation__item {
+  margin-left: 1.5rem;
+}
+
+.footer__icon-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 78px;
+}
+
+.footer__icon-fb {
+  width: 30px;
+  height: 30px;
+  background-color: #828282;
+  background: url(/img/icons/facebook.svg);
+}
+
+.footer__icon-ig {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #828282;
+  background: url(/img/icons/instagram.svg);
+}
+
+.footer__bootom-wrapper {
+  display: flex;
+  justify-content: center;
 }
 /*# sourceMappingURL=main.css.map */

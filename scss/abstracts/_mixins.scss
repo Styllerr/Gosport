@@ -1,0 +1,5 @@
+@mixin logo-style($url) {
+    width: 214px;
+    height: 64px;
+    background-image: url($url);
+}

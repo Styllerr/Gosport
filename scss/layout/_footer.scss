@@ -1,0 +1,45 @@
+.footer {
+    padding: 76px 6.25%;
+    &__top-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 45px;
+    }
+    &__logo-img {
+        @include logo-style("/img/logo-000.png");
+    }
+    &__logo {
+    }
+    &__footer-navigation {
+        display: flex;
+        justify-content: space-around;
+    }
+    &-navigation__item {
+        margin-left: 1.5rem;
+    }
+    &__icon-wrapper {
+        display: flex;
+        justify-content: space-around;
+        width: 78px;
+    }
+    &__icon {
+        &-fb {
+            width: 30px;
+            height: 30px;
+            background-color: #828282;
+            background: url(/img/icons/facebook.svg);
+        }
+        &-ig {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #828282;
+            background: url(/img/icons/instagram.svg);
+        }
+    }
+    &__bootom-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+}
