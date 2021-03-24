@@ -749,13 +749,21 @@ a:visited {
 @media screen and (max-width: 768px) {
   .visual-block__block-wrapper {
     width: 100%;
+    order: 0;
   }
 }
 
 .visual-block__image-sm-wrapper {
   max-width: 681px;
   width: 100%;
+  order: 0;
   z-index: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .visual-block__image-sm-wrapper {
+    order: 1;
+  }
 }
 
 .visual-block__water-letter {
@@ -766,13 +774,26 @@ a:visited {
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: normal;
-  font-size: 440px;
+  font-size: 27.5rem;
   text-transform: uppercase;
   z-index: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .visual-block__water-letter {
+    display: none;
+  }
+}
+
 .visual-block__text {
   position: relative;
+  order: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .visual-block__text {
+    order: 0;
+  }
 }
 
 .visual-block__discription {
@@ -860,6 +881,7 @@ a:visited {
 @media screen and (max-width: 768px) {
   .text-block-wrapper {
     flex-basis: 100%;
+    order: 1;
   }
 }
 

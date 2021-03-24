@@ -25,17 +25,25 @@
     &__block-wrapper {
         @media screen and (max-width: $screen-lg) {
             width: 100%;
+            order: 0;
         }
         position: relative;
         width: 50%;
         padding-right: 10px;
     }
     &__image-sm-wrapper {
+        @media screen and (max-width: $screen-lg) {
+            order: 1;
+        }
         max-width: 681px;
         width: 100%;
+        order: 0;
         z-index: 0;
     }
     &__water-letter {
+        @media screen and (max-width: $screen-lg) {
+            display: none;
+        }
         position: absolute;
         left: -160px;
         top: 33%;
@@ -43,12 +51,16 @@
         font-family: "Playfair Display";
         font-style: normal;
         font-weight: normal;
-        font-size: 440px;
+        font-size: 27.5rem;
         text-transform: uppercase;
         z-index: 1;
     }
     &__text {
+        @media screen and (max-width: $screen-lg) {
+            order: 0;
+        }
         position: relative;
+        order: 1;
     }
     &__discription {
         width: 100%;
@@ -119,6 +131,7 @@
 .text-block-wrapper {
     @media screen and (max-width: $screen-lg) {
         flex-basis: 100%;
+        order: 1;
     }
     max-width: 681px;
     display: flex;

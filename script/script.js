@@ -18,3 +18,12 @@ window.addEventListener('scroll', (e) => {
         document.querySelector('.start-screen__btn-down').style.display = 'block';
     }
 })
+let widthBrouser = window.innerWidth;
+const btnName = document.querySelector('.caption__link > a')
+window.addEventListener('resize', (e) => {
+    widthBrouser = window.innerWidth;
+    console.log(widthBrouser, btnName);
+    (widthBrouser < 769) ? btnName.innerHTML('Our catalogue')
+    : btnName.innerHTML('Catalogue')
+})
+console.log(widthBrouser);
