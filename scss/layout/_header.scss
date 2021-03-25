@@ -39,7 +39,6 @@ a:visited {
             font-weight: 300;
             color: #fff;
         }
-
     }
     &__logo-img {
         z-index: 5;
@@ -183,4 +182,3 @@ a:visited {
 .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::before {
     transform: rotate(45deg);
 }
-
