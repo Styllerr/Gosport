@@ -40,10 +40,10 @@ a:visited {
             color: #fff;
         }
     }
-    &__logo-img {
+    &__logo-images {
         z-index: 5;
         order: 1;
-        @include logo-style("/img/logo-fff.png");
+        @include logo-style("/images/logo-fff.png");
     }
 }
 .dark-link {
@@ -150,8 +150,8 @@ a:visited {
         color: #000;
     }
 }
-.mobile-menu__checkbox:checked ~ .top-header__logo-img {
-    background-image: url("/img/logo-000.png");
+.mobile-menu__checkbox:checked ~ .top-header__logo-images {
+    background-image: url("/images/logo-000.png");
     transition: 0.5s;
 }
 .mobile-menu__checkbox:checked ~ .top-header__link {

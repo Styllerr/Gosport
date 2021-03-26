@@ -67,18 +67,18 @@
     max-width: max-content;
     &__phone {
         @extend %list-style;
-        background: url(/img/icons/phone.svg) no-repeat;
+        background: url(/images/icons/phone.svg) no-repeat;
     }
     &__email {
         @extend %list-style;
-        background: url(/img/icons/envelope.svg) no-repeat;
+        background: url(/images/icons/envelope.svg) no-repeat;
     }
     &__address {
         @extend %list-style;
-        background: url(/img/icons/marker.svg) no-repeat;
+        background: url(/images/icons/marker.svg) no-repeat;
     }
     &__note {
         @extend %list-style;
-        background: url(/img/icons/clock.svg) no-repeat;
+        background: url(/images/icons/clock.svg) no-repeat;
     }
 }

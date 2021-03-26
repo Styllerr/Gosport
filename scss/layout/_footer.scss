@@ -11,8 +11,8 @@
         align-items: center;
         margin-bottom: 45px;
     }
-    &__logo-img {
-        @include logo-style("/img/logo-000.png");
+    &__logo-images {
+        @include logo-style("/images/logo-000.png");
     }
     &__footer-navigation {
         @media screen and (max-width: $screen-lg) {
@@ -46,14 +46,14 @@
             width: 30px;
             height: 30px;
             background-color: #828282;
-            background: url(/img/icons/facebook.svg);
+            background: url(/images/icons/facebook.svg);
         }
         &-ig {
             display: inline-block;
             width: 30px;
             height: 30px;
             background-color: #828282;
-            background: url(/img/icons/instagram.svg);
+            background: url(/images/icons/instagram.svg);
         }
     }
     &__bootom-wrapper {

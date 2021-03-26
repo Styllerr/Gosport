@@ -1,5 +1,5 @@
 .contact-info__phone, .contact-info__email, .contact-info__address, .contact-info__note {
-  padding: 2px 0 0 35px;
+  padding: 2px 0 2px 35px;
   margin: 16px 0;
 }
 
@@ -434,12 +434,12 @@ a:visited {
   color: #fff;
 }
 
-.top-header__logo-img {
+.top-header__logo-images {
   z-index: 5;
   order: 1;
   width: 214px;
   height: 64px;
-  background-image: url("/img/logo-fff.png");
+  background-image: url("/images/logo-fff.png");
 }
 
 .dark-link {
@@ -558,8 +558,8 @@ a:visited {
   color: #000;
 }
 
-.mobile-menu__checkbox:checked ~ .top-header__logo-img {
-  background-image: url("/img/logo-000.png");
+.mobile-menu__checkbox:checked ~ .top-header__logo-images {
+  background-image: url("/images/logo-000.png");
   transition: 0.5s;
 }
 
@@ -860,42 +860,42 @@ a:visited {
 .fashion__image-lg {
   width: 100%;
   padding-top: 103.88%;
-  background: url(/img/dress-1.jpg.webp) no-repeat center;
+  background: url(/images/dress-1.jpg) no-repeat center;
   background-size: contain;
 }
 
 .fashion__image-sm {
   width: 100%;
   padding-top: 60.499%;
-  background: url(/img/dress-2.jpg.webp) no-repeat center;
+  background: url(/images/dress-2.jpg) no-repeat center;
   background-size: contain;
 }
 
 .pregnancy__image-lg {
   width: 100%;
   padding-top: 103.88%;
-  background: url(/img/dress-4.jpg.webp) no-repeat center;
+  background: url(/images/dress-4.jpg) no-repeat center;
   background-size: contain;
 }
 
 .pregnancy__image-sm {
   width: 100%;
   padding-top: 60.499%;
-  background: url(/img/dress-3.jpg.webp) no-repeat center;
+  background: url(/images/dress-3.jpg) no-repeat center;
   background-size: contain;
 }
 
 .makeup__image-lg {
   width: 100%;
   padding-top: 103.88%;
-  background: url(/img/dress-5.jpg.webp) no-repeat center;
+  background: url(/images/dress-5.jpg) no-repeat center;
   background-size: contain;
 }
 
 .makeup__image-sm {
   width: 100%;
   padding-top: 60.499%;
-  background: url(/img/dress-6.jpg.webp) no-repeat center;
+  background: url(/images/dress-6.jpg) no-repeat center;
   background-size: contain;
 }
 
@@ -1048,19 +1048,19 @@ a:visited {
 }
 
 .contact-info__phone {
-  background: url(/img/icons/phone.svg) no-repeat;
+  background: url(/images/icons/phone.svg) no-repeat;
 }
 
 .contact-info__email {
-  background: url(/img/icons/envelope.svg) no-repeat;
+  background: url(/images/icons/envelope.svg) no-repeat;
 }
 
 .contact-info__address {
-  background: url(/img/icons/marker.svg) no-repeat;
+  background: url(/images/icons/marker.svg) no-repeat;
 }
 
 .contact-info__note {
-  background: url(/img/icons/clock.svg) no-repeat;
+  background: url(/images/icons/clock.svg) no-repeat;
 }
 
 .footer {
@@ -1082,10 +1082,10 @@ a:visited {
   }
 }
 
-.footer__logo-img {
+.footer__logo-images {
   width: 214px;
   height: 64px;
-  background-image: url("/img/logo-000.png");
+  background-image: url("/images/logo-000.png");
 }
 
 .footer__footer-navigation {
@@ -1130,7 +1130,7 @@ a:visited {
   width: 30px;
   height: 30px;
   background-color: #828282;
-  background: url(/img/icons/facebook.svg);
+  background: url(/images/icons/facebook.svg);
 }
 
 .footer__icon-ig {
@@ -1138,7 +1138,7 @@ a:visited {
   width: 30px;
   height: 30px;
   background-color: #828282;
-  background: url(/img/icons/instagram.svg);
+  background: url(/images/icons/instagram.svg);
 }
 
 .footer__bootom-wrapper {
