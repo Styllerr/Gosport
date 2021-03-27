@@ -11,6 +11,42 @@ a:visited {
     text-decoration: none;
     color: initial;
 }
+header.header-dark-thema {
+    background-color: transparent;
+    & > .top-header {
+        &__link {
+            @media screen and (max-width: $screen-lg) {
+                display: none;
+            }
+            width: 123px;
+            height: 48px;
+            box-sizing: border-box;
+            border: 1px solid #ffffff;
+            padding: 14px 15px;
+            z-index: 5;
+            order: 0;
+            & > span {
+                font-weight: 300;
+                color: #fff;
+            }
+            // &_checked {
+            //     border: 1px solid #000;
+            //     & > span {
+            //         color: #000;
+            //     }
+            // }
+        }
+        &__logo-images {
+            z-index: 5;
+            order: 1;
+            @include logo-style("/images/logo-fff.png");
+            // &_checked {
+            //     background-image: url("/images/logo-000.png");
+            //     transition: 0.5s;
+            // }
+        }
+    }
+}
 .top-header {
     position: absolute;
     display: flex;
@@ -22,7 +58,7 @@ a:visited {
     top: 0;
     left: 0;
     right: 0;
-    background-color: transparent;
+    background-color: #fff;
     z-index: 5;
     &__link {
         @media screen and (max-width: $screen-lg) {
@@ -31,19 +67,29 @@ a:visited {
         width: 123px;
         height: 48px;
         box-sizing: border-box;
-        border: 1px solid #ffffff;
+        border: 1px solid #000;
         padding: 14px 15px;
         z-index: 5;
         order: 0;
         &-text {
             font-weight: 300;
-            color: #fff;
+            color: #000;
+        }
+        &_checked {
+            border: 1px solid #fff;
+            & > span {
+                color: #fff;
+            }
         }
     }
     &__logo-images {
         z-index: 5;
         order: 1;
-        @include logo-style("/images/logo-fff.png");
+        @include logo-style("/images/logo-000.png");
+        &_checked {
+            background-image: url("/images/logo-fff.png");
+            transition: 0.5s;
+        }
     }
 }
 .dark-link {
@@ -62,6 +108,23 @@ a:visited {
         line-height: 31px;
         text-align: right;
         color: #fff;
+    }
+}
+
+.header-dark-thema .mobile-menu__icon {
+    position: relative;
+    & > span {
+        background-color: #fff;
+    }
+    &::before,
+    &::after {
+        background-color: #fff;
+    }
+    &_checked {
+        &::before,
+        &::after {
+            background-color: #fff;
+        }
     }
 }
 .mobile-menu {
@@ -89,7 +152,7 @@ a:visited {
             top: 14px;
             width: 100%;
             height: 1px;
-            background-color: #fff;
+            background-color: #000;
         }
         &::before {
             top: 0;
@@ -105,12 +168,31 @@ a:visited {
             position: absolute;
             content: "";
             height: 1px;
-            background-color: #fff;
+            background-color: #000;
             transition: 0.2s;
         }
         &:hover::after {
             width: 100%;
             transition: 0.2s;
+        }
+        &_checked {
+            & > span {
+                height: 0;
+            }
+            &::before {
+                transform: rotate(45deg);
+                transform-origin: 10%;
+            }
+            &::after {
+                transform: rotate(-45deg);
+                transform-origin: 10%;
+            }
+            &::before,
+            &::after {
+                background-color: #000;
+                transition: 0.2s;
+                width: 100%;
+            }
         }
     }
 }
@@ -149,36 +231,8 @@ a:visited {
     &__link {
         color: #000;
     }
-}
-.mobile-menu__checkbox:checked ~ .top-header__logo-images {
-    background-image: url("/images/logo-000.png");
-    transition: 0.5s;
-}
-.mobile-menu__checkbox:checked ~ .top-header__link {
-    border: 1px solid #000;
-}
-.mobile-menu__checkbox:checked ~ .top-header__link > .top-header__link-text {
-    color: #000;
-}
-.mobile-menu__checkbox:checked ~ .mobile-menu__nav {
-    opacity: 1;
-}
-.mobile-menu__checkbox:checked ~ .top-menu {
-    height: max-content;
-    padding: 96px 0 150px;
-}
-.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon {
-    background: transparent;
-}
-.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::before,
-.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::after {
-    top: 0;
-    width: 100%;
-    background: #000;
-}
-.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::after {
-    transform: rotate(-45deg);
-}
-.mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::before {
-    transform: rotate(45deg);
+    &_checked {
+        height: max-content;
+        padding: 96px 0 150px;
+    }
 }

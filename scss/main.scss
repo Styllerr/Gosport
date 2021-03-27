@@ -4,8 +4,7 @@
 
 @import "base/typography", "base/base";
 
-@import "layout/header", 
-"layout/start-screen", 
-"layout/visual-block",
-"layout/contact-section",
-"layout/footer";
+@import "layout/index-header", "layout/index-start-screen", "layout/index-visual-block",
+    "layout/index-contact-section", "layout/index-footer";
+
+@import "layout/catalogue";

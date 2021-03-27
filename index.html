@@ -11,27 +11,33 @@
 </head>
 
 <body>
-    <header class="top-header">
-        <input type="checkbox" id="checkbox" class="mobile-menu__checkbox">
-        <label for="checkbox" class="mobile-menu__btn">
-            <div class="mobile-menu__icon"><span></span></div>
-        </label>
-        <div class="top-header__logo-images">
-            <a href="http://gosport.biz.ua/" class="top-header__logo"></a>
-        </div>
+    <header class="top-header header-dark-thema">
         <a href="https://athenadressrental.youcanbook.me" class="top-header__link">
             <span class="top-header__link-text">Book a Try-on</span>
         </a>
+        <div class="top-header__logo-images">
+            <a href="http://gosport.biz.ua/" class="top-header__logo"></a>
+        </div>
 
         <div class="top-header__menu top-menu">
             <div class="top-menu__border"></div>
             <ul class="top-menu__list">
                 <li class="top-menu__item"><a href="#" class="top-menu__link">Hair and makeup</a></li>
-                <li class="top-menu__item"><a href="#" class="top-menu__link">Catalogue</a></li>
+                <li class="top-menu__item"><a href="#" class="top-menu__link top-menu__link_selected">
+                        <ul>Catalogue
+                            <li>All dresses</li>
+                            <li>Pregnancy Engagement</li>
+                        </ul>
+                    </a>
+                </li>
+                <li class="top-menu__item"><a href="#" class="top-menu__link">Catalogue for pregant</a></li>
                 <li class="top-menu__item"><a href="#" class="top-menu__link">Terms and conditions</a></li>
                 <li class="top-menu__item"><a href="#" class="top-menu__link">Contacts</a></li>
                 <li class="top-menu__item dark-link"><a href="#" class="top-menu__link">Book a Try-on</a></li>
             </ul>
+        </div>
+        <div class="mobile-menu__btn">
+            <div class="mobile-menu__icon"><span></span></div>
         </div>
     </header>
     <main>
@@ -51,7 +57,7 @@
                     <span>by Athena</span>
                 </div>
                 <div class="caption__link">
-                    <a href="http://gosport.biz.ua/catalog/">Catalogue</a>
+                    <a href="/catalogue.html">Catalogue</a>
                 </div>
             </div>
             <a href="#first" class="start-screen__btn-down">
@@ -263,7 +269,7 @@
             </a>
         </div>
     </footer>
-    <script src="./script/script.js"></script>
+    <script src="./script/index-script.js"></script>
 </body>
 
 </html>

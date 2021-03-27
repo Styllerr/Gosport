@@ -1,0 +1,12 @@
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 24%);
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    &__item {
+        width: 100%;
+        & > figcaption {
+            text-align: center;
+        }
+    }
+}
