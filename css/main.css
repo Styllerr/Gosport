@@ -1194,13 +1194,14 @@ header.header-dark-thema > .top-header__logo-images {
 
 .img-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 24%);
+  grid-template-columns: repeat(auto-fill, 396px);
   grid-template-rows: auto auto;
   grid-gap: 20px;
 }
 
 .img-grid__item {
   width: 100%;
+  height: auto;
 }
 
 .img-grid__item > figcaption {
