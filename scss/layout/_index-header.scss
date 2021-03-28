@@ -13,6 +13,7 @@ a:visited {
 }
 header.header-dark-thema {
     background-color: transparent;
+    border: none;
     & > .top-header {
         &__link {
             @media screen and (max-width: $screen-lg) {
@@ -54,6 +55,7 @@ header.header-dark-thema {
     align-items: center;
     padding: 1rem 6.25%;
     box-sizing: border-box;
+    border-bottom: 1px solid #bdbdbd;
     height: 96px;
     top: 0;
     left: 0;
@@ -212,10 +214,7 @@ header.header-dark-thema {
     transition: 0.5s;
     overflow: hidden;
     background-color: #fff;
-    &__border {
-        width: 100%;
-        border: 1px solid #bdbdbd;
-    }
+
     &__item {
         margin-bottom: 48px;
     }
