@@ -30,21 +30,11 @@ header.header-dark-thema {
                 font-weight: 300;
                 color: #fff;
             }
-            // &_checked {
-            //     border: 1px solid #000;
-            //     & > span {
-            //         color: #000;
-            //     }
-            // }
         }
         &__logo-images {
             z-index: 5;
             order: 1;
             @include logo-style("/images/logo-fff.png");
-            // &_checked {
-            //     background-image: url("/images/logo-000.png");
-            //     transition: 0.5s;
-            // }
         }
     }
 }
@@ -91,6 +81,38 @@ header.header-dark-thema {
         &_checked {
             background-image: url("/images/logo-fff.png");
             transition: 0.5s;
+        }
+    }
+}
+.sub-menu {
+    cursor: pointer;
+    &_show > span {
+        padding: 0 10px;
+        &::before {
+            content: "\2802";
+        }
+        &::after {
+            content: "\2802";
+        }
+    }
+    &__list {
+        font-family: Futura PT;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 23px;
+        padding: 0;
+        list-style-type: none;
+        height: 0;
+        overflow: hidden;
+        transition: 1s;
+        &_show {
+            padding-top: 16px;
+            height: fit-content;
+            transition: 1s;
+        }
+        & > li {
+            margin-bottom: 16px;
         }
     }
 }
@@ -221,11 +243,12 @@ header.header-dark-thema {
     &__list {
         font-family: "Futura PT";
         font-style: normal;
-        font-weight: 300;
+        font-weight: 400;
         font-size: 24px;
         line-height: 31px;
         transition: 0.5s;
         list-style: none;
+        padding-left: 50px;
     }
     &__link {
         color: #000;
