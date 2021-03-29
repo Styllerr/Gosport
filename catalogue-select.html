@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css">
-    <title>Single dress</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Select catalogue</title>
 </head>
 
 <body>
@@ -17,14 +17,18 @@
         <div class="top-header__logo-images">
             <a href="http://gosport.biz.ua/" class="top-header__logo"></a>
         </div>
+        <div class="mobile-menu__btn">
+            <div class="mobile-menu__icon"><span></span></div>
+        </div>
         <div class="top-header__menu top-menu">
             <div class="top-menu__border"></div>
             <ul class="top-menu__list">
                 <li class="top-menu__item"><a href="/makeup.html" class="top-menu__link">Hair and makeup</a></li>
                 <li class="top-menu__item sub-menu"><span>Catalogue</span>
                     <ul class="sub-menu__list">
-                        <li><a href="/catalogue.html" class="top-menu__link top-menu__link_selected">All dresses</a></li>
-                        <li><a href="/pregant.html" class="top-menu__link top-menu__link_selected">Pregnancy Engagement</a></li>
+                        <li><a href="catalogue.html" class="top-menu__link top-menu__link_selected">All dresses</a></li>
+                        <li><a href="/pregant.html" class="top-menu__link top-menu__link_selected">Pregnancy
+                                Engagement</a></li>
                     </ul>
                 </li>
                 <li class="top-menu__item"><a href="#" class="top-menu__link">Terms and conditions</a></li>
@@ -32,53 +36,26 @@
                 <li class="top-menu__item dark-link"><a href="#" class="top-menu__link">Book a Try-on</a></li>
             </ul>
         </div>
-        <div class="mobile-menu__btn">
-            <div class="mobile-menu__icon"><span></span></div>
-        </div>
     </header>
-    <main class="main-single-dress">
-        <article class="single-dress">
-            <h1 class="single-dress__caption">
-                Aurora
-            </h1>
-            <p class="single-dress__description">
-                A blush pink transformer dress with white off shoulder top.
-            </p>
-            <table class="single-dress__table">
-                <tr class="single-dress__table-top-row">
-                    <td class="single-dress__table-item">Size: 0-12 (Adjustable)</td>
-                    <td class="single-dress__table-item">$ 300.00 CAD / Day</td>
-                </tr>
-                <tr>
-                    <td class="single-dress__table-item">Damage Deposit: $ 300.00 CAD</td>
-                    <td class="single-dress__table-item">$ 650.00 CAD / Week</td>
-                </tr>
-            </table>
-            <a href="https://athenadressrental.youcanbook.me" class="top-header__link">
-                <span class="top-header__link-text">Book a Try-on</span>
+    <main class="catalog-select">
+        <div class="catalog-select__wrapper">
+            <div class="catalog-select__header-wrapper">
+                <h1 class="catalog-select__header">Catalogue</h1>
+            </div>
+            <a href="/catalogue.html" class="catalog-select__img-wrapper">
+                <figure>
+                    <img src="/images/MR-E-Session-Signature-11.jpg" alt="Engagement Dresses">
+                    <figcaption>Engagement Dresses</figcaption>
+                </figure>
             </a>
-        </article>
-        <figure class="img-grid__item-1">
-            <img src="./images/catal-item--1.jpg.webp" alt="Sirena" />
-        </figure>
-        <figure class="img-grid__item-2">
-            <img src="./images/catal-item--2.jpg.webp" alt="Sirena" />
-        </figure>
-        <figure class="img-grid__item-3">
-            <img src="./images/catal-item--3.jpg.webp" alt="Sirena" />
-        </figure>
-        <figure class="img-grid__item-4">
-            <img src="./images/catal-item--3.jpg.webp" alt="Sirena" />
-        </figure>
-        <figure class="img-grid__item-5">
-            <img src="./images/catal-item--3.jpg.webp" alt="Sirena" />
-        </figure>
-        <figure class="img-grid__item-6">
-            <img src="./images/catal-item--4.jpg.webp" alt="Sirena" />
-        </figure>
-        <figure class="img-grid__item-7">
-            <img src="./images/catal-item--5.jpg.webp" alt="Sirena" />
-        </figure>
+            <a href="/pregant.html"class="catalog-select__img-wrapper">
+                <figure>
+                    <img src="/images/DSC_1045-edit2.jpg" alt="Pregnancy Dresses">
+                    <figcaption>Pregnancy Dresses</figcaption>
+                </figure>
+            </a>
+        </div>
+
     </main>
     <footer class="footer">
         <div class="footer__top-wrapper">
@@ -89,7 +66,7 @@
                 <a href="/makeup.html">
                     <div class="footer-navigation__item">Hair and Makeup Package</div>
                 </a>
-                <a href="/catalogue.html">
+                <a href="/catalogue-select.html">
                     <div class="footer-navigation__item">Catalogue</div>
                 </a>
                 <a href="#">
@@ -121,7 +98,7 @@
             </a>
         </div>
     </footer>
-    <script src="/script/index-script.js"></script>
+    <script src="./script/index-script.js"></script>
 </body>
 
 </html>

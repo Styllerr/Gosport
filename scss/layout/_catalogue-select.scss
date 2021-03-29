@@ -1,0 +1,44 @@
+.catalog-select {
+    &__wrapper {
+        padding: 160px 6.25% 48px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__header-wrapper {
+        width: 100%;
+        text-align: center;
+    }
+    &__header {
+        font-family: "Playfair Display";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 53px;
+        text-transform: uppercase;
+        color: #000000;
+        margin: 0 0 40px;
+    }
+    &__img-wrapper {
+        width: 48%;
+        & > figure {
+            margin: 0;
+            & > img {
+                width: 100%;
+                max-height: 754px;
+                object-fit: cover;
+            }
+            & > figcaption {
+                width: 100%;
+                padding-top: 24px;
+                text-align: center;
+                font-family: "Playfair Display";
+                font-style: normal;
+                font-weight: normal;
+                font-size: 32px;
+                line-height: 43px;
+                color: #000000;
+            }
+        }
+    }
+}

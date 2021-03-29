@@ -1,10 +1,12 @@
-main.catalogue-wrapper {
+main.catalogue-wrapper,
+main.pregant-wrapper {
     @media screen and (max-width: $screen-xl) {
         padding: 0 15px;
     }
     padding: 0 6.25%;
 }
-article.catalogue {
+article.catalogue,
+article.pregant {
     padding: 160px 0 48px;
     & > h1 {
         width: 100%;

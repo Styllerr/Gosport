@@ -1,0 +1,81 @@
+.packages {
+    &__wrapper {
+        padding: 160px 6.25% 0px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__header-wrapper {
+        width: 100%;
+        text-align: flex-start;
+    }
+    &__header {
+        font-family: "Playfair Display";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 53px;
+        text-transform: uppercase;
+        color: #000000;
+        margin: 0 0 40px;
+        & + p {
+            width: 100%;
+            max-width: 900px;
+            font-family: "Futura PT";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+            color: #000000;
+        }
+    }
+    &__img-wrapper {
+        @media screen and (max-width: $screen-lg) {
+            width: 49%;
+            margin: 0 0 32px;
+        }
+        @media screen and (max-width: $screen-sd) {
+            width: 100%;
+            margin: 0 0 16px;
+        }
+        width: 24%;
+        margin: 0 0 60px;
+        & > img {
+            width: 100%;
+            max-height: 754px;
+            object-fit: cover;
+        }
+        & > figcaption {
+            width: 100%;
+            padding-top: 24px;
+            text-align: left;
+            font-family: "Playfair Display";
+            font-style: normal;
+            font-weight: 450;
+            font-size: 24px;
+            line-height: 31px;
+            color: #000000;
+        }
+    }
+    &__price {
+        font-family: "Futura PT";
+        font-style: normal;
+        font-weight: 450;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    &__description {
+        font-family: "Futura PT";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+    }
+    &__bottom-border {
+        width: 100%;
+        border: 1px solid #BDBDBD;
+    }
+}

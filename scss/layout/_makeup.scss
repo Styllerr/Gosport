@@ -1,0 +1,21 @@
+.main-makeup {
+    padding: 160px 6.25% 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, auto);
+    @media screen and (max-width: $screen-xl) {
+        grid-gap: 16px;
+    }
+    grid-gap: 32px;
+    & > figure {
+        margin: 0;
+        & > img {
+            width: 100%;
+        }
+    }
+}
+.makeup {
+    &__item {
+        margin-bottom: 16px;
+    }
+}
