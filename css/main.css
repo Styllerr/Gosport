@@ -1640,7 +1640,7 @@ article.pregant > h1 {
   object-fit: cover;
 }
 
-.packages__img-wrapper > figcaption {
+.packages__img-wrapper > h2 {
   width: 100%;
   padding-top: 24px;
   text-align: left;
