@@ -1774,11 +1774,29 @@ article.pregant > h1 {
 }
 
 .modal-card__img {
-  background: url("/images/packages-1-c.webp") no-repeat;
-  background-size: cover;
   margin: 24px 0;
   width: 474px;
   height: 220px;
+}
+
+.modal-card__img-bronze {
+  background: url("/images/packages-1-c.webp") no-repeat;
+  background-size: cover;
+}
+
+.modal-card__img-silver {
+  background: url("/images/packages-2-c.webp") no-repeat;
+  background-size: cover;
+}
+
+.modal-card__img-gold {
+  background: url("/images/packages-3-c.webp") no-repeat;
+  background-size: cover;
+}
+
+.modal-card__img-platinum {
+  background: url("/images/packages-4-c.webp") no-repeat;
+  background-size: cover;
 }
 
 .modal-card__btn-group {
@@ -1795,6 +1813,7 @@ article.pregant > h1 {
 .modal-card__btn_fff {
   width: 112px;
   height: 40px;
+  cursor: pointer;
   border: 1px solid #000000;
   background: none;
   box-sizing: border-box;

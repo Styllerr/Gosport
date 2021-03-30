@@ -165,11 +165,25 @@
         flex-direction: column;
     }
     &__img {
-        background: url("/images/packages-1-c.webp") no-repeat;
-        background-size: cover;
         margin: 24px 0;
         width: 474px;
         height: 220px;
+        &-bronze {
+            background: url("/images/packages-1-c.webp") no-repeat;
+            background-size: cover;
+        }
+        &-silver {
+            background: url("/images/packages-2-c.webp") no-repeat;
+            background-size: cover;
+        }
+        &-gold {
+            background: url("/images/packages-3-c.webp") no-repeat;
+            background-size: cover;
+        }
+        &-platinum {
+            background: url("/images/packages-4-c.webp") no-repeat;
+            background-size: cover;
+        }
     }
     &__btn-group {
         width: 100%;
@@ -184,6 +198,7 @@
     &__btn_fff {
         width: 112px;
         height: 40px;
+        cursor: pointer;
         border: 1px solid #000000;
         background: none;
         box-sizing: border-box;
