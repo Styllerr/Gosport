@@ -1581,6 +1581,7 @@ article.pregant > h1 {
 }
 
 .packages__wrapper {
+  position: relative;
   padding: 160px 6.25% 0px;
   display: flex;
   justify-content: space-between;
@@ -1651,6 +1652,10 @@ article.pregant > h1 {
   color: #000000;
 }
 
+.packages__img-wrapper > a {
+  text-decoration: underline;
+}
+
 .packages__price {
   font-family: "Futura PT";
   font-style: normal;
@@ -1672,6 +1677,139 @@ article.pregant > h1 {
 
 .packages__bottom-border {
   width: 100%;
-  border: 1px solid #BDBDBD;
+  border: 1px solid #bdbdbd;
+}
+
+.packages__modal-conteiner {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  width: 100%;
+  height: 100vh;
+}
+
+.packages__modal-conteiner_active {
+  display: block;
+}
+
+.packages__modal-background {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background: #E5E5E5;
+}
+
+.packages__modal-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 538px;
+  height: 638px;
+  padding: 40px;
+  box-sizing: border-box;
+  border: 1px solid #000000;
+  background-color: #fff;
+}
+
+.modal-card {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-card_active {
+  display: flex;
+}
+
+.modal-card__close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.modal-card__close-btn::before, .modal-card__close-btn::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  background-color: #000;
+  top: 8px;
+}
+
+.modal-card__close-btn::before {
+  transform: rotate(45deg);
+  left: -2px;
+}
+
+.modal-card__close-btn::after {
+  transform: rotate(-45deg);
+  right: -2px;
+}
+
+.modal-card__header {
+  width: 100%;
+  text-align: center;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 53px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+}
+
+.modal-card__img-wrapper {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-card__img {
+  background: url("/images/packages-1-c.webp") no-repeat;
+  background-size: cover;
+  margin: 24px 0;
+  width: 474px;
+  height: 220px;
+}
+
+.modal-card__btn-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.modal-card__btn_fff {
+  width: 112px;
+  height: 40px;
+  border: 1px solid #000000;
+  background: none;
+  box-sizing: border-box;
+}
+
+.modal-card__btn_000 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 112px;
+  height: 40px;
+  color: #000;
+  border: 1px solid #000000;
+  background: none;
+  box-sizing: border-box;
+  margin-left: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
